@@ -1,0 +1,5 @@
+<?php
+
+$pxp->oUser->sDefaultAction = "{@defaultAction}";
+
+?>

@@ -1,0 +1,225 @@
+/***************************************************************
+*  Copyright notice
+*
+*  (c) 2003-2005 Tobias Bender (tobias@phpxplorer.org)
+*  All rights reserved
+*
+*  This script is part of the phpXplorer project. The phpXplorer project is
+*  free software; you can redistribute it and/or modify
+*  it under the terms of the GNU General Public License as published by
+*  the Free Software Foundation; either version 2 of the License, or
+*  (at your option) any later version.
+*
+*  The GNU General Public License can be found at
+*  http://www.gnu.org/copyleft/gpl.html.
+*  A copy is found in the textfile GPL.txt distributed with these scripts.
+*
+*  This script is distributed in the hope that it will be useful,
+*  but WITHOUT ANY WARRANTY; without even the implied warranty of
+*  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+*  GNU General Public License for more details.
+*
+*  This copyright notice MUST APPEAR in all copies of the script!
+***************************************************************/
+
+body{
+	background-color: #ffffff;
+}
+
+body, td, th, input, select, textarea, span, div, label, button, a{
+	font-family: Verdana, sans-serif;
+	font-size: 11px;
+	color: #444444;
+}
+
+/* CoolMenus 4 - default styles - do not edit */
+.clCMAbs{position:absolute; visibility:hidden; left:0; top:0}
+/* CoolMenus 4 - default styles - end */
+
+.clLevel0,.clLevel0over{position:absolute; margin-left:2px; padding:2px; padding-top:3px; font-size:11px}
+.clLevel0{background-color:#eeeeee; color:#666666}
+.clLevel0over{background-color:#eeeeee; color:#333333; cursor:pointer; cursor: pointer}
+.clLevel0border{position:absolute; visibility:hidden; background-color:#eeeeee}
+
+.clLevel1, .clLevel1over{position:absolute; padding:2px; padding-top:4px}
+.clLevel1{background-color:#fefefe; color:#333333}
+.clLevel1over{background-color:#fefefe; cursor:pointer; cursor: pointer; background-color:#e3e9f1; color:#333333}
+.clLevel1border{position:absolute; visibility:hidden; background-color:#cccccc}
+
+.clLevel2, .clLevel2over{position:absolute; padding:2px; padding-top:4px}
+.clLevel2{background-color:#fefefe; color:#333333}
+.clLevel2over{background-color:#fefefe; cursor:pointer; cursor:pointer; background-color:#e3e9f1; color:#333333}
+.clLevel2border{position:absolute; visibility:hidden; background-color:#cccccc}
+
+.clSep{position:absolute; background-color:#ffffff}
+
+td.label{
+	vertical-align: top
+}
+
+td.thumbnailMenu{
+	border: 1px solid #eeeeee;
+	border-bottom: 0px;
+	border-left: 0px;
+	width: 23px;
+	text-align: center;
+}
+
+td.thumbnail{
+	border: 1px solid #eeeeee;
+	border-bottom: 0px;
+	border-left: 0px;
+}
+
+.white{
+	background-color: #ffffff;
+}
+
+.head{
+	height: 20px;
+	color: #666666;
+	background-color: #eeeeee;
+/*	font-size: 10px;*/
+	border: 1px solid;
+	border-color: ButtonHighlight ButtonShadow ButtonShadow ButtonHighlight;
+}
+
+.lineDiv{
+	height: 22px;
+	clear: both;
+}
+
+.cellDiv{
+	float: left;
+/*	font-size: 10px;*/
+	border: 1px solid;
+	border-color: white #eeeeee white white;
+	overflow: hidden;
+	height: 100%;
+	white-space: nowrap;
+}
+
+.headDiv{
+	color: #666666;
+	background-color: #eeeeee;
+/*	font-size: 10px;*/
+	border-top: 1px solid ButtonHighlight;
+	border-left: 1px solid ButtonHighlight;
+	border-bottom: 1px solid ButtonShadow;
+	border-right: 0px;
+	float: left;
+	cursor: pointer;
+	padding-top: 3px;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.fixedHeadDiv{
+	float: left;
+	border-right: 1px solid ButtonShadow;
+	cursor: default;
+}
+
+.sizer{
+	width: 8px;
+	background-color: #eeeeee;
+	border-top: 1px solid ButtonHighlight;
+	border-right: 1px solid ButtonShadow;
+	border-bottom: 1px solid ButtonShadow;
+	border-left: 0px;
+	cursor: w-resize;
+	z-index: 1000;
+	float: left;
+}
+
+.hover{
+	background-color:#fafafa;
+}
+
+a{
+	text-decoration: none;
+}
+
+a:focus{
+	color: #993300
+}
+
+.error{
+	color: red;
+	font-weight: bold
+}
+
+img{
+	vertical-align: text-top;
+}
+
+/*
+iframe.reload{
+	position: absolute;
+	left: -400px;
+}
+*/
+
+iframe.content{
+	position: absolute;
+	top: -2000px;
+	left: -2000px;
+	z-index: 8000;
+	border: 0px;
+	background-color:white;
+}
+
+img.fresh{}
+
+#contentMenu{
+	z-index: 8000;
+	position: absolute;
+	height: 25px;
+	background-color: #eeeeee;
+	top: -2000px;
+	left: -2000px;
+	border: 0px;
+	border-bottom: 1px solid #999999;
+	width: 100%;
+}
+
+button.navi{
+	width: 42px;
+	height: 16px;
+	padding: 0px;
+	font-size: 8px;
+}
+
+button.action{
+	background-color: #f8f8f8;
+	border: 1px solid #7f9db9;
+	color: #444444;
+	margin: 2px;
+	padding: 2px;
+}
+
+	
+form{
+	margin: 0px;
+}
+
+span.icon{
+	cursor: pointer;
+}
+
+div.cMOut{
+	padding: 4px;
+	background-color: #ffffff;
+	cursor: pointer;	
+}
+
+div.cMOver{
+	padding: 4px;
+	background-color: #e3e9f1;
+	cursor: pointer;
+}
+
+.contextMenu{
+	background-color: #ffffff;
+	border: 1px solid #bbbbbb;
+}

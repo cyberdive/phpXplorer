@@ -1,0 +1,14 @@
+iframe{
+	border: 1px solid #cccccc;
+	width: 100%;
+}
+
+body{
+	margin: 10px;
+	margin-bottom: 0px;
+	padding: 0px;
+}
+
+button{
+	margin-top: 8px;
+}

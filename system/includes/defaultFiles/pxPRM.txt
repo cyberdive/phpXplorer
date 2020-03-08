@@ -1,0 +1,24 @@
+<?php
+
+$aData['members']['{@member}'] = array();
+
+$lData = &$aData['members']['{@member}'];
+
+$lData["prmOpenName"] = array({@openByName});
+
+$lData["prmOpenTypeInherit"] = {@openByTypeInherit};
+if(!$lData["prmOpenTypeInherit"]  or  !isset($lData["prmOpenType"]))
+  $lData["prmOpenType"] = array();
+
+$lData["prmOpenType"] = array_merge($lData["prmOpenType"], array({@openByType}));
+
+
+$lData["prmEditName"] = array({@editByName});
+
+$lData["prmEditTypeInherit"] = {@editByTypeInherit};
+if(!$lData["prmEditTypeInherit"]  or  !isset($lData["prmEditType"]))
+  $lData["prmEditType"] = array();
+
+$lData["prmEditType"] = array_merge($lData["prmEditType"], array({@editByType}));
+
+?>

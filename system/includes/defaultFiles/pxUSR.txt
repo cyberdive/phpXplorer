@@ -1,0 +1,20 @@
+<?php
+
+$this->aUsers['{@pxuId}']->sLanguage = "{@pxuLanguage}";
+
+$this->aUsers['{@pxuId}']->sTheme = "{@pxuTheme}";
+
+$this->aUsers['{@pxuId}']->sDefaultShare = "{@pxuDefaultShare}";
+
+$this->aUsers['{@pxuId}']->sDateFormat = "{@pxuDateFormat}";
+$this->aUsers['{@pxuId}']->sTimeFormat = "{@pxuTimeFormat}";
+
+$this->aUsers['{@pxuId}']->bTrashcan = {@pxuTrashcan};
+
+$this->aUsers['{@pxuId}']->sLastName = "{@pxuName}";
+$this->aUsers['{@pxuId}']->sFirstname = "{@pxuFirstName}";
+$this->aUsers['{@pxuId}']->sMobile = "{@pxuMobile}";
+$this->aUsers['{@pxuId}']->sPhone = "{@pxuPhone}";
+$this->aUsers['{@pxuId}']->sEmail = "{@pxuEmail}";
+
+?>

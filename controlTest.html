@@ -1,0 +1,104 @@
+<html>
+<head>
+<title></title>
+<style type="text/css">
+<!--
+
+button.pxpSelector{
+	width: 40px;
+	font-family: Verdana;
+	font-size: 8px;
+	font-weight: bold;
+	border: 1px solid #999999;
+	height: 18px;
+}
+
+input.pxpFile{
+	font-family: Verdana;
+	font-size: 11px;
+	border: 1px solid #cccccc;
+	font-family: Verdana;
+	height: 18px;
+}
+body, td{
+	font-family: Verdana;
+	font-size: 12px;
+}
+
+-->
+</style>
+<script type="text/javascript" language="JavaScript">
+<!--
+
+function cls_pxpFileInfo(filename, typeKey, currentDir, currentURL){
+	this.name = filename
+	this.typeKey = typeKey
+	this.dir = currentDir
+	this.url = currentURL
+}
+
+function cls_pxp(url){
+	this.url = url
+	this.arr_callObj = new Array()
+	this.arr_callHandler = new Array()
+	this.arr_returnHandler = new Array()
+	this.windows = new Array()
+	
+	this.show = function(obj, shareId, callbackHandler, returnHandler){
+		var parts = obj.name.split("_")
+		var callId = "c" + String(Math.random()).replace(".", "")
+		this.windows[callId] = window.open(this.url + "/system/index.php?shareId=" + shareId + "&allowSelection=true&path=%2F" + eval("document.forms[0]." + parts[1]).value, callId, "scrollbars=yes, resizable=yes, width=888, height=480, left=100, top=100")
+		this.arr_callObj[callId] = obj
+		this.arr_callHandler[callId] = callbackHandler
+		this.arr_returnHandler[callId] = returnHandler
+	}
+	
+	this.callback = function(callId, filename, typeKey, currentDir , currentURL){	
+		this.arr_callHandler[callId](this.arr_callObj[callId], this.arr_returnHandler[callId](new cls_pxpFileInfo(filename, typeKey, currentDir , currentURL)))
+	}
+}
+
+function pxpReturn_file(obj_file){
+	return obj_file.name
+}
+
+function pxpReturn_url(obj_file){
+	return obj_file.url + "/" + obj_file.name
+}
+
+function pxpCallback_button(obj, value){
+	var parts = obj.name.split("_")
+	if(parts[0] == "btn")
+		eval("document.forms[0]." + parts[1]).value = value
+}
+
+var pxp = new cls_pxp("http://192.168.1.24/phpXplorer")
+
+//-->
+</script>
+</head>
+<body>
+
+<form name="zzz" method="post" action="" onsubmit="return false">
+
+<table summary="" border="0" cellspacing="10" cellpadding="0">
+<tr>
+	<td>pxpCallback_button</td>
+	<td>pxpReturn_file</td>
+	<td>
+		<input type="text" name="testField1" value="" class="pxpFile" style="width: 420px" />
+		<button name="btn_testField1" onclick="pxp.show(this, 'test', pxpCallback_button, pxpReturn_file)" class="pxpSelector"> ooo </button>
+	</td>
+</tr>
+<tr>
+	<td>pxpCallback_button</td>
+	<td>pxpReturn_url</td>
+	<td>
+		<input type="text" name="testField2" value="" class="pxpFile" style="width: 420px" />
+		<button name="btn_testField2" onclick="pxp.show(this, 'test', pxpCallback_button, pxpReturn_url)" class="pxpSelector"> ooo </button>
+	</td>
+</tr>
+
+</form>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<?php
+
+$this->aShares["{@pxsId}"] = new pxCLS_share($this, "{@pxsDir}", "{@pxsURL}", $bNoVarReplace);
+
+$this->aShares["{@pxsId}"]->aUsers = array({@pxsShareUsers});
+$this->aShares["{@pxsId}"]->aRoles = array({@pxsShareRoles});
+
+$this->aShares["{@pxsId}"]->iCreateHTAccess = {@pxsCreateHtaccess};
+$this->aShares["{@pxsId}"]->sStartpage = "{@pxsStartpage}";
+$this->aShares["{@pxsId}"]->sTreeviewWidth = "{@pxsTreeviewWidth}";
+	
+$this->aShares["{@pxsId}"]->bFullTree = {@pxsFullTree};
+$this->aShares["{@pxsId}"]->bTreeReload = {@pxsTreeReload};
+	
+$this->aShares["{@pxsId}"]->iThumbnailSize = 100;
+$this->aShares["{@pxsId}"]->iImageLibrary = 1;
+$this->aShares["{@pxsId}"]->bCacheThumbnails = true;
+$this->aShares["{@pxsId}"]->iThumbnailQuality = 90;
+$this->aShares["{@pxsId}"]->bCheckThumbnailPermission = false;
+
+?>
